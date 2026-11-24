@@ -527,7 +527,7 @@ function paint(){
   document.getElementById("zme").textContent=T("◎ 현재 위치","◎ My location");
   document.getElementById("hint").textContent=LANG==="ko"?"가고 싶은 곳을 써 보세요. 하고 싶은 것은 「AI와 자유여행」에서 찾아 드려요.":({en:"Type a place you want to go. For things to do, try “DIY Trip”.",ja:"行きたい場所を入力してください。やりたいことは「DIY旅行」で探せます。",zhs:"输入想去的地方。想做的事可以在「自助游」里找。",zht:"輸入想去的地方。想做的事可以在「自助旅行」裡找。",es:"Escribe un lugar al que quieras ir. Para planes, prueba «Viaje a tu aire»."}[LANG]||"Type a place you want to go. For things to do, try “DIY Trip”.");   // 11-06 칩 이름 「AI일정짜기」 (6개 언어)
   document.getElementById("mapimg").alt=T("대한민국 관광 지도","Korea travel map");
-  document.title=LANG==="ko"?"모자이크트립 - 대한민국":"MosaicTrip for Korea";
+  document.title=LANG==="ko"?"머니퍼즐투어 데일리퍼즐":"MoneyPuzzle Tour Daily Puzzle";   /* mk_puzzle */
   try{ footBuild(); }catch(e){}
   try{ if(window.MTB) MTB.boxPaint(); }catch(e){}   // 아래 「고객 게시판」 칸 (board.js, 11-09)
   // 안내·출처 (사장님 10-15) — 한글 화면은 한글만, 영어는 영어만
