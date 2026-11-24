@@ -294,7 +294,8 @@ html.mpc-lock #treasIsle{visibility:hidden}
     if(!T) T=["Visits "," · Visitors "," · Today ",""]; e.textContent=T[0]+f(J.total)+T[1]+f(J.uniq)+T[2]+f(J.today)+T[3]; }
   try{ var v=""; try{ v=localStorage.getItem("navi_vid")||""; if(!v){ v=Math.random().toString(36).slice(2)+Date.now().toString(36); localStorage.setItem("navi_vid",v); } }catch(x){}
     var n="1"; try{ if(!PH){ if(sessionStorage.getItem("navi_hit")) n="0"; else sessionStorage.setItem("navi_hit","1"); } if(localStorage.getItem("mp_owner")) n="0"; }catch(x){}
-    fetch("https://brief-live-hub.emhwang3.workers.dev/hc?s="+(PH?"mtrip":window.GAMEAPP?"puzzle":"navi")+"&n="+n+"&vid="+encodeURIComponent(v),{cache:"no-store"}).then(function(r){ return r.json(); }).then(function(j){ J=j; vPaint(); }).catch(function(){});
+    var pf=""; if(window.GAMEAPP&&!PH){ try{ pf=sessionStorage.getItem("pz_pf")||""; if(!pf){ var C=window.Capacitor; pf=(C&&C.getPlatform&&C.getPlatform()==="ios")?"ios":/^android-app:\/\/kr\.co\.moneypuzzle\.puzzle/.test(document.referrer||"")?"and":"web"; sessionStorage.setItem("pz_pf",pf); } }catch(x){ pf="web"; } }   /* 11-24 게임앱 플랫폼별(구글 안드로이드 앱·애플 아이폰 앱·웹) 사장님 「애플과 구글을 구분해서」 */
+    fetch("https://brief-live-hub.emhwang3.workers.dev/hc?s="+(PH?"mtrip":window.GAMEAPP?"puzzle":"navi")+"&n="+n+"&vid="+encodeURIComponent(v)+(pf?"&pf="+pf+"&pfs=1":""),{cache:"no-store"}).then(function(r){ return r.json(); }).then(function(j){ J=j; window.PZ_VC=j; vPaint(); try{ window.dispatchEvent(new Event("pzvc")); }catch(x){} }).catch(function(){});
   }catch(x){}
   document.addEventListener("DOMContentLoaded",function(){ var _sl=window.setLang; if(_sl) window.setLang=function(){ var r=_sl.apply(this,arguments); try{ vPaint(); }catch(e){} return r; }; vPaint(); });   // setLang 은 아래쪽 스크립트에 있어 다 읽은 뒤 잇는다
 })();
@@ -1737,7 +1738,7 @@ Promise.all([jget("regions.json"),jget("info.json"),mapLoad(NAVI_ROOT)]).then(fu
 <script>document.write('<script src="'+PZB+'pg.js?v=1124io"><\/script>')</script>
 
 
-<script>document.write('<script src="'+PZB+'event.js?v=1124tt"><\/script>')</script>
+<script>document.write('<script src="'+PZB+'event.js?v=1124vc"><\/script>')</script>
 
 
 
