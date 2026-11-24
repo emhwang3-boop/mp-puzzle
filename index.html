@@ -9,16 +9,16 @@
 <link rel="canonical" href="https://puzzle.moneypuzzle.co.kr/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://puzzle.moneypuzzle.co.kr/">
-<meta property="og:site_name" content="머니퍼즐투어 데일리퍼즐">
-<meta property="og:title" content="머니퍼즐투어 데일리퍼즐 · Daily Puzzle">
+<meta property="og:site_name" content="VIPHola.com 데일리퍼즐">
+<meta property="og:title" content="VIPHola.com 데일리퍼즐 · Daily Puzzle">
 <meta property="og:description" content="빙고 · 스도쿠 · 명소 맞히기 · 보물상자 — 매일 새 판, 무료. Bingo · Sudoku · Spot the Sight · Treasure Box — new Korea puzzles every day, free.">
-<meta property="og:image" content="https://puzzle.moneypuzzle.co.kr/og.jpg">
+<meta property="og:image" content="https://puzzle.moneypuzzle.co.kr/og.jpg?v=1124v">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google" content="notranslate">
-<title>머니퍼즐투어 데일리퍼즐 · Daily Puzzle</title>
+<title>VIPHola.com 데일리퍼즐 · Daily Puzzle</title>
 <script>window.MP_PAID=false;   /* 11-17 사장님 「투어앱은 무료 서비스」 — true 면 가이드 인솔·프라이빗 카투어·차량 대절·가이드 일정 검토 화면이 돌아온다(허브 SHOP_HIDE·주문 막기도 같이 풀 것) */</script>
 
 <style>html.gm .top,html.gm .sbox,html.gm #res,html.gm #nevSec,html.gm #infob,html.gm #mtbBox,html.gm #credit,html.gm #foot,html.gm #vcnt,html.gm #vdet,html.gm #aigBtn,html.gm #aigMe,html.gm #aigCard,html.gm #treasIsle,html.gm #meedge,html.gm #mz [data-k^="__"],html.gm #mz [data-k^="__"]+.glb,html.gm #mz [data-k="adinq"],html.gm #mz .gbb,html.gm .xbb{display:none!important}html.gm #nvExit{z-index:2147483605!important}html.gm #shBox{z-index:2147483100!important}</style>
@@ -527,7 +527,7 @@ function paint(){
   document.getElementById("zme").textContent=T("◎ 현재 위치","◎ My location");
   document.getElementById("hint").textContent=LANG==="ko"?"가고 싶은 곳을 써 보세요. 하고 싶은 것은 「AI와 자유여행」에서 찾아 드려요.":({en:"Type a place you want to go. For things to do, try “DIY Trip”.",ja:"行きたい場所を入力してください。やりたいことは「DIY旅行」で探せます。",zhs:"输入想去的地方。想做的事可以在「自助游」里找。",zht:"輸入想去的地方。想做的事可以在「自助旅行」裡找。",es:"Escribe un lugar al que quieras ir. Para planes, prueba «Viaje a tu aire»."}[LANG]||"Type a place you want to go. For things to do, try “DIY Trip”.");   // 11-06 칩 이름 「AI일정짜기」 (6개 언어)
   document.getElementById("mapimg").alt=T("대한민국 관광 지도","Korea travel map");
-  document.title=LANG==="ko"?"머니퍼즐투어 데일리퍼즐":"MoneyPuzzle Tour Daily Puzzle";   /* mk_puzzle */
+  document.title=LANG==="ko"?"VIPHola.com 데일리퍼즐":"VIPHola.com Daily Puzzle";   /* mk_puzzle */
   try{ footBuild(); }catch(e){}
   try{ if(window.MTB) MTB.boxPaint(); }catch(e){}   // 아래 「고객 게시판」 칸 (board.js, 11-09)
   // 안내·출처 (사장님 10-15) — 한글 화면은 한글만, 영어는 영어만
@@ -739,7 +739,7 @@ function shOwnerFix0(p, appName, tok, o){   // o={url,txt,desc} = 앱 대신 그
     if(shHas(lab,"카카오톡","KakaoTalk")&&window.Kakao){   // 카카오 SDK — PC 에서도 카카오톡 「친구에게 보내기」 (2026-10-13)
       b.classList.remove("sht");
       b.onclick=function(){ var m=p.querySelector(".shmsg"), ku=url;
-        try{ if(!window.Kakao.isInitialized()) window.Kakao.init("90a47ca48c2a967dd4d14b3b48de2e3b"); if(m) m.textContent=L6(SM.kc);
+        try{ if(!window.Kakao.isInitialized()) window.Kakao.init("aaed7115a187389600f9069c8ff3b6a4"); if(m) m.textContent=L6(SM.kc);
           window.Kakao.Share.sendDefault({objectType:"feed",content:{title:txt,description:o&&o.desc?o.desc:({ko:"한국 여행 지도 · 6개 언어",en:"Korea travel map in 6 languages",ja:"韓国旅行マップ・6言語",zhs:"韩国旅行地图 · 6种语言",zht:"韓國旅行地圖 · 6種語言",es:"Mapa de viajes de Corea en 6 idiomas"})[LANG]||"Korea travel map in 6 languages",imageUrl:(o&&o.img)||"https://navi.moneypuzzle.co.kr/img/maps/kr.jpg?h=8850c5bc",imageWidth:(o&&o.img)?1200:800,imageHeight:(o&&o.img)?630:800,link:{webUrl:ku,mobileWebUrl:ku}},buttons:o?[{title:L6(SM.ko1),link:{webUrl:ku,mobileWebUrl:ku}}]:[{title:L6(SM.ko1),link:{webUrl:ku,mobileWebUrl:ku}},{title:ilab,link:{webUrl:iurl,mobileWebUrl:iurl}}]}); }   /* 11-05 사장님 「그림카드로, 전국지도가 나오는 걸로」 — 글자 카드(text)→그림 카드(feed) */
         catch(e){ try{ navigator.clipboard.writeText(url); }catch(x){} if(m) m.textContent=L6(SM.kna)+url; } };
       return;
@@ -1737,7 +1737,7 @@ Promise.all([jget("regions.json"),jget("info.json"),mapLoad(NAVI_ROOT)]).then(fu
 <script>document.write('<script src="'+PZB+'pg.js?v=1124ap"><\/script>')</script>
 
 
-<script>document.write('<script src="'+PZB+'event.js?v=1124gr"><\/script>')</script>
+<script>document.write('<script src="'+PZB+'event.js?v=1124sm"><\/script>')</script>
 
 
 
