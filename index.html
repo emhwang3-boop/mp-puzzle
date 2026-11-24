@@ -740,7 +740,7 @@ function shOwnerFix0(p, appName, tok, o){   // o={url,txt,desc} = 앱 대신 그
       b.classList.remove("sht");
       b.onclick=function(){ var m=p.querySelector(".shmsg"), ku=url;
         try{ if(!window.Kakao.isInitialized()) window.Kakao.init("90a47ca48c2a967dd4d14b3b48de2e3b"); if(m) m.textContent=L6(SM.kc);
-          window.Kakao.Share.sendDefault({objectType:"feed",content:{title:txt,description:o&&o.desc?o.desc:({ko:"한국 여행 지도 · 6개 언어",en:"Korea travel map in 6 languages",ja:"韓国旅行マップ・6言語",zhs:"韩国旅行地图 · 6种语言",zht:"韓國旅行地圖 · 6種語言",es:"Mapa de viajes de Corea en 6 idiomas"})[LANG]||"Korea travel map in 6 languages",imageUrl:"https://navi.moneypuzzle.co.kr/img/maps/kr.jpg?h=8850c5bc",imageWidth:800,imageHeight:800,link:{webUrl:ku,mobileWebUrl:ku}},buttons:o?[{title:L6(SM.ko1),link:{webUrl:ku,mobileWebUrl:ku}}]:[{title:L6(SM.ko1),link:{webUrl:ku,mobileWebUrl:ku}},{title:ilab,link:{webUrl:iurl,mobileWebUrl:iurl}}]}); }   /* 11-05 사장님 「그림카드로, 전국지도가 나오는 걸로」 — 글자 카드(text)→그림 카드(feed) */
+          window.Kakao.Share.sendDefault({objectType:"feed",content:{title:txt,description:o&&o.desc?o.desc:({ko:"한국 여행 지도 · 6개 언어",en:"Korea travel map in 6 languages",ja:"韓国旅行マップ・6言語",zhs:"韩国旅行地图 · 6种语言",zht:"韓國旅行地圖 · 6種語言",es:"Mapa de viajes de Corea en 6 idiomas"})[LANG]||"Korea travel map in 6 languages",imageUrl:(o&&o.img)||"https://navi.moneypuzzle.co.kr/img/maps/kr.jpg?h=8850c5bc",imageWidth:(o&&o.img)?1200:800,imageHeight:(o&&o.img)?630:800,link:{webUrl:ku,mobileWebUrl:ku}},buttons:o?[{title:L6(SM.ko1),link:{webUrl:ku,mobileWebUrl:ku}}]:[{title:L6(SM.ko1),link:{webUrl:ku,mobileWebUrl:ku}},{title:ilab,link:{webUrl:iurl,mobileWebUrl:iurl}}]}); }   /* 11-05 사장님 「그림카드로, 전국지도가 나오는 걸로」 — 글자 카드(text)→그림 카드(feed) */
         catch(e){ try{ navigator.clipboard.writeText(url); }catch(x){} if(m) m.textContent=L6(SM.kna)+url; } };
       return;
     }
@@ -1734,10 +1734,10 @@ Promise.all([jget("regions.json"),jget("info.json"),mapLoad(NAVI_ROOT)]).then(fu
 
 
 
-<script>document.write('<script src="'+PZB+'pg.js?v=1124gm"><\/script>')</script>
+<script>document.write('<script src="'+PZB+'pg.js?v=1124ap"><\/script>')</script>
 
 
-<script>document.write('<script src="'+PZB+'event.js?v=1124pz"><\/script>')</script>
+<script>document.write('<script src="'+PZB+'event.js?v=1124kk"><\/script>')</script>
 
 
 
