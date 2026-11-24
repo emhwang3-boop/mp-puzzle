@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<script>/* 게임앱 독립 사이트 (mk_puzzle.py 가 넣음) — PZB = 이 사이트 주소(자기 js·아이콘), 그림·자료는 아래 <base> 로 투어앱 주소에서 */window.PZB=location.href.replace(/[?#].*$/,"").replace(/[^\/]*$/,"");window.GAMEAPP=1;window.PZ_APP=1;window.PZ_SHARE="https://puzzle.moneypuzzle.co.kr/";document.documentElement.classList.add("gm");document.write('<link rel="manifest" href="'+PZB+'manifest.webmanifest"><link rel="icon" href="'+PZB+'icon-192.png"><link rel="apple-touch-icon" href="'+PZB+'icon-192.png">');</script>
+<script>/* 게임앱 독립 사이트 (mk_puzzle.py 가 넣음) — PZB = 이 사이트 주소(자기 js·아이콘), 그림·자료는 아래 <base> 로 투어앱 주소에서 */window.PZB=location.href.replace(/[?#].*$/,"").replace(/[^\/]*$/,"");window.GAMEAPP=1;window.PZ_APP=1;window.PZ_SHARE="https://puzzle.moneypuzzle.co.kr/";document.documentElement.classList.add("gm","gm0");setTimeout(function(){ document.documentElement.classList.remove("gm0"); },6000);document.write('<link rel="manifest" href="'+PZB+'manifest.webmanifest"><link rel="icon" href="'+PZB+'icon-192.png"><link rel="apple-touch-icon" href="'+PZB+'icon-192.png">');</script>
 <base href="https://navi.moneypuzzle.co.kr/">
 <meta name="description" content="빙고 · 스도쿠 · 명소 맞히기 · 보물상자 — 매일 새 판, 무료. Bingo · Sudoku · Spot the Sight · Treasure Box — new Korea puzzles every day, free.">
 <meta name="theme-color" content="#ff7a1a">
@@ -21,7 +21,7 @@
 <title>VIPHola.com 데일리퍼즐 · Daily Puzzle</title>
 <script>window.MP_PAID=false;   /* 11-17 사장님 「투어앱은 무료 서비스」 — true 면 가이드 인솔·프라이빗 카투어·차량 대절·가이드 일정 검토 화면이 돌아온다(허브 SHOP_HIDE·주문 막기도 같이 풀 것) */</script>
 
-<style>html.gm .top,html.gm .sbox,html.gm #res,html.gm #nevSec,html.gm #infob,html.gm #mtbBox,html.gm #credit,html.gm #foot,html.gm #vcnt,html.gm #vdet,html.gm #aigBtn,html.gm #aigMe,html.gm #aigCard,html.gm #treasIsle,html.gm #meedge,html.gm #mz [data-k^="__"],html.gm #mz [data-k^="__"]+.glb,html.gm #mz [data-k="adinq"],html.gm #mz .gbb,html.gm .xbb{display:none!important}html.gm #nvExit{z-index:2147483605!important}html.gm #shBox{z-index:2147483100!important}</style>
+<style>html.gm .top,html.gm .sbox,html.gm #res,html.gm #nevSec,html.gm #infob,html.gm #mtbBox,html.gm #credit,html.gm #foot,html.gm #vcnt,html.gm #vdet,html.gm #aigBtn,html.gm #aigMe,html.gm #aigCard,html.gm #treasIsle,html.gm #meedge,html.gm #mz [data-k^="__"],html.gm #mz [data-k^="__"]+.glb,html.gm #mz [data-k="adinq"],html.gm #mz .gbb,html.gm .xbb{display:none!important}html.gm0::after{content:"";position:fixed;inset:0;z-index:2147483002;background:#fff8f0}html.gm #nvExit{z-index:2147483605!important}html.gm #shBox{z-index:2147483100!important}</style>
 <!-- 11-05 링크 미리보기 = 전국 지도 그림(카톡 카드와 같은 kr.jpg) · 정사각 그림이라 twitter 는 summary(잘림 없음) -->
 <script>/* 남의 사이트 액자(iframe) 안에서는 안 돈다 (사장님 10-17 퍼가기 막기) */try{ if(window.top!==window.self){ document.documentElement.style.display="none"; try{ window.top.location.replace(window.self.location.href); }catch(e){} throw 0; } }catch(e){ if(window.top!==window.self) throw e; }</script>
 
@@ -1737,7 +1737,7 @@ Promise.all([jget("regions.json"),jget("info.json"),mapLoad(NAVI_ROOT)]).then(fu
 <script>document.write('<script src="'+PZB+'pg.js?v=1124rv"><\/script>')</script>
 
 
-<script>document.write('<script src="'+PZB+'event.js?v=1124ev"><\/script>')</script>
+<script>document.write('<script src="'+PZB+'event.js?v=1124g0"><\/script>')</script>
 
 
 
